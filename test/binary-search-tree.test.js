@@ -47,7 +47,7 @@ describe('Binary search tree', () => {
       tree.add(4);
       assert.strictEqual(tree.root().data, 2);
     });
-
+ 
     it.optional('find existing values', () => {
       const tree = new BinarySearchTree();
       tree.add(2);
@@ -63,7 +63,7 @@ describe('Binary search tree', () => {
       assert.strictEqual(tree.find(32).data, 32);
       assert.strictEqual(tree.find(14).data, 14);
     });
-
+ 
     it.optional('find non-existing values', () => {
       const tree = new BinarySearchTree();
       tree.add(2);
@@ -78,7 +78,7 @@ describe('Binary search tree', () => {
       assert.strictEqual(tree.find(1337), null);
       assert.strictEqual(tree.find(42), null);
     });
-
+ 
     it.optional('correctly checks presence of the values', () => {
       const tree = new BinarySearchTree();
       tree.add(9);
@@ -94,7 +94,7 @@ describe('Binary search tree', () => {
       assert.strictEqual(tree.has(7), false);
       assert.strictEqual(tree.has(4), false);
     });
-
+ 
     it.optional('remove & has works correctly', () => {
       const tree = new BinarySearchTree();
       tree.add(9);
@@ -119,7 +119,7 @@ describe('Binary search tree', () => {
       assert.strictEqual(tree.has(54), true);
       assert.strictEqual(tree.has(1), true);
     });
-
+ 
     it.optional('min works correctly', () => {
       const tree = new BinarySearchTree();
       tree.add(9);
@@ -134,7 +134,7 @@ describe('Binary search tree', () => {
       tree.remove(2);
       assert.strictEqual(tree.min(), 1);
     });
-
+ 
     it.optional('max works correctly', () => {
       const tree = new BinarySearchTree();
       tree.add(9);
@@ -148,10 +148,8 @@ describe('Binary search tree', () => {
       tree.remove(6);
       tree.remove(2);
       assert.strictEqual(tree.max(), 54);
-    });
-
-  });
-
+    }); 
+  }); 
   describe('some additional tests', () => {
     it.optional('correctly find min & max', () => {
       const { values, min, max } = getTestingTools(20);
@@ -178,6 +176,6 @@ describe('Binary search tree', () => {
       assert.strictEqual(valuesToRemove.every(value => tree.has(value) === false), true);
       assert.strictEqual(values.every(value => tree.has(value) === true), true);
     });
-  });
+  }); 
 
 });
